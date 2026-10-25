@@ -1,0 +1,19 @@
+{
+  "name": "فروشگاه آنلاین برنج طلا رایس",
+  "short_name": "طلا رایس",
+  "description": "خرید مستقیم برنج اصیل و معطر کامفیروزی از شالیزار",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#042a1b",
+  "theme_color": "#042a1b",
+  "dir": "rtl",
+  "lang": "fa-IR",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

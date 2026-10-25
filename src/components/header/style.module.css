@@ -1,0 +1,109 @@
+.header {
+  background: linear-gradient(135deg, #2A663C 0%, #1C4A2B 100%);
+  padding: 1.15rem 1rem 1rem 1rem;
+  padding-top: max(1.15rem, env(safe-area-inset-top, 1.15rem));
+  margin: 0;
+  border-radius: 0 0 1.25rem 1.25rem;
+  border-bottom: none;
+  box-shadow: 0 4px 20px rgba(28, 74, 43, 0.22);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin: 0.85rem auto 0.85rem auto;
+    max-width: 1200px;
+    width: calc(100% - 2rem);
+    border-radius: 1.25rem;
+    border: none;
+    top: 0.85rem;
+    padding: 1.15rem 1.65rem;
+    box-shadow: 0 8px 28px rgba(28, 74, 43, 0.28);
+    gap: 0.95rem;
+  }
+}
+
+.topRow {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 2.85rem;
+}
+
+.logoLink {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.userActionWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.adminBadgeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 0.38rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  font-family: var(--font-vazir), system-ui, sans-serif;
+}
+
+.adminBadgeLink:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #D4AF37;
+  color: #ffffff;
+}
+
+.userBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  padding: 0.45rem 0.95rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-family: var(--font-vazir), system-ui, sans-serif;
+  line-height: 1.2;
+}
+
+.userBtn:hover {
+  background: rgba(255, 255, 255, 0.24);
+  border-color: #D4AF37;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.crownIcon {
+  color: #fbbf24;
+}
+
+.userBtnText {
+  white-space: nowrap;
+  letter-spacing: normal;
+}
+

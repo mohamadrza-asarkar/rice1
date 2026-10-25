@@ -1,11 +1,81 @@
-<div align="center">
+# 🌾 Rice E-Commerce Platform | سامانه فروشگاهی و پلتفرم اختصاصی E-Commerce
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+یک پلتفرم مدرن، سریع و فول‌استک جهت ارائه و فروش آنلاین محصولات ارگانیک و کشاورزی که با آخرین استانداردهای فرانت‌اند وب (`React 19` و `Vite`) و معماری کامپوننت‌محور پیاده‌سازی شده است.
 
-  <h1>Built with AI Studio</h2>
+---
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 🚀 ویژگی‌های برجسته و کلیدی (Key Features)
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+- **🎨 طراحی پاسخگو و مدرن (Mobile-First Responsive UX):** رابط کاربری خلوت، اصیل و بهینه‌سازی‌شده برای تمامی نمایشگرها (موبایل، تبلت و دسکتاپ).
+- **🛒 سبد خرید هوشمند (Smart Persisted Cart):** محاسبه لحظه‌ای تخفیف‌ها، هزینه‌های ارسال و همگام‌سازی وضعیت سبد خرید با `LocalStorage`.
+- **👑 پنل مدیریتی همه‌جانبه (Advanced Admin Dashboard):**
+  - مدیریت محصولات (افزایش، ویرایش، حذف و تغییر موجودی).
+  - مدیریت پیشنهادهای شگفت‌انگیز و تایمر معکوس.
+  - مدیریت سفارشات مشتریان و درج کد رهگیری پستی ۲۴ رقمی.
+  - مدیریت نظرات، اسلایدرها و بنرهای تبلیغاتی.
+- **📦 سامانه رهگیری هوشمند مرسولات پستی:** امکان پیگیری وضعیت سفارشات از طریق کد سفارش یا شماره مرسوله پستی.
+- **🛡️ احراز هویت و دسترسی سطحی (RBAC):** تفکیک دسترسی‌های کاربر عادی و مدیر همراه با اعتبارسنجی فرانت‌اند و نرمال‌سازی شماره‌های موبایل ایرانی.
+- **⚡ بارگذاری مقاوم تصاویر (Asset Resilience):** استفاده از الگوی Fallback دوگانه برای تضمین بارگذاری تصاویر حتی در صورت قطعی اتصال شبکه یا سرور.
 
-</div>
+---
+
+## 📐 معماری و ساختار پروژه (Architecture & Code Structure)
+
+پروژه بر پایه اصول **Clean Code** و **Modular Architecture** طراحی شده است:
+
+```text
+├── src/
+│   ├── api/          # لایه ارتباط با REST API و انباشت هندلرهای شبکه
+│   ├── assets/       # فایل‌های استاتیک، فونت‌ها و استایل‌های اصلی
+│   ├── components/   # کامپوننت‌های مجزا و ماژولار (Hero, ProductCard, Modal, etc.)
+│   ├── context/      # مدیریت وضعیت سراسری (Global React Context)
+│   ├── data/         # داده‌های اولیه و فایل پشتیبان (Mock Catalog)
+│   ├── pages/        # صفحات اصلی سامانه (Home, Catalog, Product, Cart, Admin, Auth, Profile)
+│   ├── utils/        # توابع کمکی (تبدیل اعداد به فارسی، فرمت‌دهی قیمت، متون)
+│   └── main.jsx      # نقطه ورود اپلیکیشن
+├── public/           # دارایی‌های عمومی و استاتیک وب‌سرور
+└── vite.config.js    # تنظیمات بیلد و محیط Vite
+```
+
+---
+
+## 🛠️ تکنولوژی‌های استفاده‌شده (Tech Stack)
+
+- **Frontend:** React 19, React Router v6, Axios
+- **Styling:** CSS Modules, Tailwind CSS v4, FontAwesome 7
+- **Build Tool:** Vite 6
+- **Typography:** Vazirmatn Font
+
+---
+
+## 💻 راهنمای نصب و اجرا در محیط محلی (Setup & Installation)
+
+۱. پروژه را کلون کرده یا فایل ZIP را استخراج کنید:
+```bash
+git clone https://github.com/your-username/rice-ecommerce-app.git
+cd rice-ecommerce-app
+```
+
+۲. وابستگی‌ها را نصب کنید:
+```bash
+npm install
+```
+
+۳. سرور توسعه را اجرا کنید:
+```bash
+npm run dev
+```
+
+۴. جهت ساخت خروجی نهایی (Production Build):
+```bash
+npm run build
+```
+
+---
+
+## 🤖 نحوه استفاده از ابزارهای هوش مصنوعی (AI-Assisted Engineering)
+
+در فرایند توسعه این پروژه از ابزارهای پیشرفته **AI (LLM / AI Studio)** به شکل هدفمند استفاده شده است:
+- **معماری و ایده‌پردازی ساختار (Architectural Scaffolding):** تسریع در الگودهی لایه‌های API و کامپوننت‌های مجزا.
+- **تولید داده‌های نمونه (Mock Data Generation):** ایجاد کاتالوگ جامع محصولات و اطلاعات آزمایشی با ساختار واقعی JSON.
+- **ریفکتورینگ و بهینه‌سازی (Refactoring & Code Review):** بررسی خودکار خطاهای احتمالی، کنترل لایه‌های Error Boundary و بالا بردن خوانایی کدها طبق الگوی DRY.

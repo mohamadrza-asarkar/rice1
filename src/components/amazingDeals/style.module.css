@@ -1,0 +1,250 @@
+.dealsSection {
+  margin: 0.5rem 1rem;
+  background: linear-gradient(135deg, #2A663C 0%, #1C4A2B 100%);
+  border-radius: 1.25rem;
+  padding: 1.15rem;
+  box-shadow: 0 6px 22px rgba(28, 74, 43, 0.28);
+  border: none;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .dealsSection {
+    max-width: 1200px;
+    margin: 1rem auto;
+    width: calc(100% - 2rem);
+    padding: 1.5rem;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.25rem;
+  border-bottom: none;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.title i {
+  color: #D4AF37;
+  font-size: 1.15rem;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  direction: ltr;
+}
+
+.timerSegment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #111827;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.timerSegment span {
+  font-weight: 900;
+  font-size: 0.95rem;
+  color: #111827;
+  line-height: 1;
+}
+
+.colon {
+  font-weight: 900;
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-bottom: 0.15rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Horizontal low-height card style */
+.horizontalCard {
+  display: flex;
+  gap: 0.95rem;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 1.1rem;
+  padding: 0.85rem;
+  text-decoration: none;
+  color: #0f172a;
+  align-items: center;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.horizontalCard:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+.imageCol {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  background-color: #f8fafc;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Semantic Discount Badge: Red */
+.discountBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 0.2rem 0.45rem;
+  border-bottom-left-radius: 0.55rem;
+  box-shadow: 0 2px 5px rgba(239, 68, 68, 0.35);
+  z-index: 5;
+  letter-spacing: -0.01em;
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 0;
+  gap: 0.45rem;
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.productTitle {
+  font-weight: 800;
+  font-size: 0.94rem;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.productMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.74rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.metaTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #1C3A27;
+}
+
+.metaTag i {
+  color: #D4AF37;
+  font-size: 0.7rem;
+}
+
+.metaDivider {
+  color: #cbd5e1;
+  font-size: 0.7rem;
+}
+
+.metaHighlight {
+  color: #475569;
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.priceCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.oldPrice {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  text-decoration: line-through;
+  line-height: 1;
+  margin-bottom: 0.15rem;
+}
+
+.currentPrice {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.currentPrice small {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+/* Action CTA Button: #D4AF37 */
+.addToCartBtn {
+  background-color: #D4AF37;
+  color: #111827;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 0.65rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 3px 10px rgba(212, 175, 55, 0.3);
+}
+
+.addToCartBtn:hover {
+  background-color: #C59B27;
+  color: #111827;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(197, 155, 39, 0.4);
+}
+
+.addToCartBtn:active {
+  transform: translateY(1px);
+}

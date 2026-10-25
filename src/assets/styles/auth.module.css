@@ -1,0 +1,271 @@
+/* استایل‌های لوکس، مدرن و حرفه‌ای صفحه ورود و ثبت‌نام */
+.authContainer {
+  padding: 2.5rem 1rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  direction: rtl;
+  min-height: 90vh;
+  background: radial-gradient(circle at top, #f0fdf4 0%, #F9FAFB 65%);
+  color: #111827;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.brandHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem 0;
+  gap: 0.75rem;
+}
+
+.brandLogo {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #D4AF37;
+  box-shadow: 0 10px 25px rgba(28, 58, 39, 0.2);
+  background-color: #1C3A27;
+}
+
+.brandTitle {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #1C3A27;
+  margin: 0;
+  letter-spacing: -0.02em;
+  font-family: var(--font-vazir), system-ui, sans-serif;
+}
+
+.brandSubtitle {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* کارت اصلی فرم */
+.authCard {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 24px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 20px 45px -10px rgba(28, 58, 39, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* تب‌بار انتخاب ورود یا ثبت‌نام */
+.tabSwitch {
+  display: flex;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 5px;
+  gap: 6px;
+}
+
+.tabBtn {
+  flex: 1;
+  padding: 0.7rem 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.tabBtn:hover {
+  color: #1C3A27;
+}
+
+.tabBtnActive {
+  flex: 1;
+  padding: 0.7rem 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background: #1C3A27;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(28, 58, 39, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* فرم و ورودی‌ها */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.requiredAsterisk {
+  color: #ef4444;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  right: 1rem;
+  color: #64748b;
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 0.85rem 2.8rem 0.85rem 1rem;
+  color: #111827;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.passwordInput {
+  width: 100%;
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 0.85rem 2.8rem 0.85rem 2.8rem;
+  color: #111827;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.passwordInput:focus {
+  border-color: #1C3A27;
+  box-shadow: 0 0 0 4px rgba(28, 58, 39, 0.12);
+  background: #ffffff;
+}
+
+.passwordInput::placeholder {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.togglePasswordBtn {
+  position: absolute;
+  left: 0.85rem;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.35rem;
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+
+.togglePasswordBtn:hover {
+  color: #1C3A27;
+}
+
+/* پیام‌های خطا */
+.errorBox {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-right: 4px solid #e11d48;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  color: #be123c;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* دکمه اصلی عملیات */
+.submitBtn {
+  width: 100%;
+  background: linear-gradient(135deg, #2A663C 0%, #1C4A2B 100%);
+  color: #ffffff;
+  border: none;
+  padding: 0.95rem;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 0.5rem;
+  box-shadow: 0 6px 20px rgba(28, 74, 43, 0.3);
+}
+
+.submitBtn:hover {
+  background: linear-gradient(135deg, #1C4A2B 0%, #143520 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(28, 74, 43, 0.4);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+.backHomeLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #4b5563;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  transition: color 0.2s;
+}
+
+.backHomeLink:hover {
+  color: #1C3A27;
+}

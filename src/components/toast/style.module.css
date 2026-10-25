@@ -1,0 +1,209 @@
+.toastContainer {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 420px;
+  width: calc(100vw - 32px);
+  pointer-events: none;
+  direction: rtl;
+}
+
+.toastItem {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px 14px;
+  border-radius: 14px;
+  background-color: #ffffff;
+  color: #1e293b;
+  box-shadow: 0 12px 30px -4px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e2e8f0;
+  font-family: inherit;
+  font-size: 13.5px;
+  line-height: 1.5;
+  animation: slideInToast 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.toastItemExiting {
+  animation: slideOutToast 0.22s cubic-bezier(0.4, 0, 1, 1) forwards !important;
+}
+
+@keyframes slideInToast {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideOutToast {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.95);
+  }
+}
+
+/* Toast Color Variants - Clean Minimal Accents */
+.toastSuccess {
+  border-right: 4px solid #16a34a;
+}
+.toastSuccess .iconCircle {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+.toastSuccess .progressBar {
+  background-color: #16a34a;
+}
+
+.toastError,
+.toastServerError,
+.toastValidationError {
+  border-right: 4px solid #e11d48;
+}
+.toastError .iconCircle,
+.toastServerError .iconCircle,
+.toastValidationError .iconCircle {
+  background-color: #fff1f2;
+  color: #e11d48;
+}
+.toastError .progressBar,
+.toastServerError .progressBar,
+.toastValidationError .progressBar {
+  background-color: #e11d48;
+}
+
+.toastWarning {
+  border-right: 4px solid #d97706;
+}
+.toastWarning .iconCircle {
+  background-color: #fffbeb;
+  color: #d97706;
+}
+.toastWarning .progressBar {
+  background-color: #d97706;
+}
+
+.toastInfo {
+  border-right: 4px solid #1C3A27;
+}
+.toastInfo .iconCircle {
+  background-color: #ecfdf5;
+  color: #1C3A27;
+}
+.toastInfo .progressBar {
+  background-color: #1C3A27;
+}
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.toastContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.toastTitle {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #0f172a;
+}
+
+.toastMessage {
+  font-size: 13px;
+  font-weight: 500;
+  color: #475569;
+  word-break: break-word;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  margin-right: -4px;
+}
+
+.closeBtn:hover {
+  color: #334155;
+  background-color: #f1f5f9;
+}
+
+/* Progress countdown timer bar */
+.progressBarContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: #f1f5f9;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  width: 100%;
+  opacity: 0.85;
+  transform-origin: right center;
+  animation: countdown linear forwards;
+}
+
+.progressBarPaused {
+  animation-play-state: paused !important;
+}
+
+@keyframes countdown {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .toastContainer {
+    top: 14px;
+    width: calc(100vw - 24px);
+  }
+  .toastItem {
+    padding: 10px 12px 12px;
+  }
+}
+

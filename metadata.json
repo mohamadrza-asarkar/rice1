@@ -1,0 +1,6 @@
+{
+  "name": "سامانه فروشگاهی و پلتفرم E-Commerce برنج اعلا",
+  "description": "پلتفرم توسعه‌یافته اختصاصی فروش آنلاین محصولات غذایی و ارگانیک با معماری ماژولار React و پنل مدیریت پیشرفته",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

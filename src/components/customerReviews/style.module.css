@@ -1,0 +1,128 @@
+.reviewsContainer {
+  margin: 0.5rem 1rem;
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.15rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .reviewsContainer {
+    max-width: 1200px;
+    margin: 1rem auto;
+    width: calc(100% - 2rem);
+    padding: 1.5rem;
+  }
+
+  .reviewsList {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1C3A27;
+  margin: 0;
+}
+
+/* Rating Star */
+.title i {
+  color: #D4AF37;
+  font-size: 1rem;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 1.05rem;
+  }
+}
+
+.ratingBadge {
+  background-color: #f8fafc;
+  color: #1C3A27;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reviewItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Rating Star */
+.stars {
+  display: flex;
+  gap: 0.25rem;
+  color: #D4AF37;
+  font-size: 11px;
+}
+
+.userName {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* Verified Product Tag */
+.productTag {
+  display: inline-block;
+  background-color: #f1f5f9;
+  color: #1C3A27;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 0.25rem;
+  align-self: flex-start;
+}
+
+.commentText {
+  font-size: 0.8rem;
+  color: #374151;
+  line-height: 1.7;
+  text-align: justify;
+  margin: 0;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #f1f5f9;
+  margin: 0.75rem 0 0;
+}
+

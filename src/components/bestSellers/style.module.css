@@ -1,0 +1,185 @@
+.section {
+  padding: 0 1rem;
+  margin: 0.75rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .section {
+    max-width: 1200px;
+    margin: 1.25rem auto;
+    width: calc(100% - 2rem);
+    padding: 0;
+  }
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1C3A27;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.title i {
+  color: #1C3A27;
+  font-size: 1rem;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 1.15rem;
+  }
+}
+
+/* Horizontal Scroll on Mobile / Grid on Tablet & Desktop */
+.scrollContainer {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.85rem;
+  padding-top: 0.25rem;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  align-items: stretch;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollItem {
+  flex: 0 0 210px;
+  width: 210px;
+  display: flex;
+  min-width: 0;
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .scrollContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem;
+    overflow-x: visible;
+    margin: 0;
+    padding: 0;
+  }
+
+  .scrollItem {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .scrollContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    overflow-x: visible;
+    margin: 0;
+    padding: 0;
+  }
+
+  .scrollItem {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+.scrollItemMore {
+  flex: 0 0 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .scrollItemMore {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 260px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .scrollItemMore {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 260px;
+  }
+}
+
+.moreProductsCard {
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  gap: 0.65rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.moreProductsCard:hover {
+  transform: translateY(-2px);
+}
+
+.moreIconCircle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2A663C 0%, #1C4A2B 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 6px 18px rgba(28, 74, 43, 0.32);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.moreProductsCard:hover .moreIconCircle {
+  transform: scale(1.12) translateX(-4px);
+  box-shadow: 0 10px 24px rgba(28, 74, 43, 0.45);
+  background: linear-gradient(135deg, #327a48 0%, #205733 100%);
+}
+
+.moreTitle {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #1C3A27;
+  line-height: 1.3;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.moreProductsCard:hover .moreTitle {
+  color: #2A663C;
+}
+
+

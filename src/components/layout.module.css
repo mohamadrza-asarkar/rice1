@@ -1,0 +1,19 @@
+.appWrapper {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  color: #0f172a;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .appWrapper {
+    max-width: 1280px;
+    background-color: #f8fafc;
+  }
+}
